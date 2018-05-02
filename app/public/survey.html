@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Survey</h1>
+        </div>
+        <form id="form">
+            <h4>About You</h4>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="image" class="col-sm-2 col-form-label">Image</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="image" placeholder="Link to Image URL" required="true">
+                </div>
+            </div>
+            <h4 id="questions">Questions</h4>
+            <p>Question 1: Your mind is always buzzing with unexplored ideas and plans.</p>
+            <select class="custom-select" id="question1" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <p>Question 2: Generally speaking, you rely more on your experience than your imagination.</p>
+
+            <select class="custom-select" id="question2" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 3: You find it easy to stay relaxed and focused even when there is some pressure.</p>
+
+            <select class="custom-select" id="question3" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 4: You rarely do something just out of sheer curiosity.</p>
+
+            <select class="custom-select" id="question4" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 5: People can rarely upset you. </p>
+
+            <select class="custom-select" id="question5" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 6: It is often difficult for you to relate to other people's feelings.</p>
+
+            <select class="custom-select" id="question6" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 7: In a discussion, truth should be more important than people's sensitivities.</p>
+
+            <select class="custom-select" id="question7" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 8: You rarely get carried away by fantasies and ideas. </p>
+
+            <select class="custom-select" id="question8" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 9: You think everyone's views should be respected regardless of whether or not they are supported by
+                facts. </p>
+
+            <select class="custom-select" id="question9" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <p>Question 10: You feel more energetic after spending time with a group of people. </p>
+
+            <select class="custom-select" id="question10" required>
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <button type="button" id="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <div class="modal fade" id="friend" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-info">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Your New Best Friend</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="bestFriendName"></h4>
+                        <img id="bestFriendPhoto" class="img-fluid" alt="Best Friend Image">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+</body>
+<script type="text/javascript">
+
+
+    $("#submit").on("click", function (event) {
+
+        event.preventDefault();
+
+        for (var i = 0; i < form.elements.length; i++) {
+            if (form.elements[i].value === '' && form.elements[i].hasAttribute('required')) {
+                alert('Please complete all fields.');
+                return false;
+            }
+        }
+
+        var newFriend = {
+            name: $("#name").val().trim(),
+            image: $("#image").val().trim(),
+            scores: [$("#question1").val()
+                , $("#question2").val()
+                , $("#question3").val()
+                , $("#question4").val()
+                , $("#question5").val()
+                , $("#question6").val()
+                , $("#question7").val()
+                , $("#question8").val()
+                , $("#question9").val()
+                , $("#question10").val()]
+        };
+
+
+        $.post("/api/friends", newFriend, function (data) {
+            console.log(data);
+            $("#bestFriendName").text(data.bestFriendName);
+            $("#bestFriendPhoto").attr("src", data.bestFriendPhoto);
+
+            $('.modal').modal('show');
+        })
+
+
+        $("#name").val("");
+        $("#image").val("");
+        $("#question1").val("");
+        $("#question2").val("");
+        $("#question3").val("");
+        $("#question4").val("");
+        $("#question5").val("");
+        $("#question6").val("");
+        $("#question7").val("");
+        $("#question8").val("");
+        $("#question9").val("");
+        $("#question10").val("");
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,19 @@
+.container-fluid{
+    width: 90%;
+    margin: 0 auto;
+}
+
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.custom-select{
+    margin-bottom: 20px;
+}
+
+h4{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
