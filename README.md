@@ -2,6 +2,9 @@
 
 This project required JavaScript and Node.js to build an app for finding friends.
 
+## View on Heroku
+https://serene-ridge-36206.herokuapp.com/
+
 ## Overview
 
 Users are asked to start a survey.
